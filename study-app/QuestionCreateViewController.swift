@@ -29,6 +29,7 @@ class QuestionCreateViewController: UIViewController {
     }
     
     func createQuestion() {
+        performSegueWithIdentifier("chatViewController", sender: nil)
         
     }
     

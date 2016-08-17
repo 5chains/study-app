@@ -65,6 +65,22 @@ class PageMenuViewController: UIViewController {
         performSegueWithIdentifier("loginViewController", sender: nil)
     }
     
+    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        let cell = table.dequeueReusableCellWithIdentifier("QuestionTableViewCell", forIndexPath: indexPath) as! QuestionTableViewCell
+        
+        cell.questionUserNameLabel.text = "shun"
+        cell.questionThemeLabel.text = "三角関数まぢむりぃ"
+        
+        
+        
+        performSegueWithIdentifier("chatViewControllerFromCell",sender: nil)
+        
+        
+        
+    }
+    
+    
+    
     
     
     

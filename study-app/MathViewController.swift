@@ -9,6 +9,8 @@
 import UIKit
 
 class MathViewController: UIViewController {
+    
+    var tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,7 @@ class MathViewController: UIViewController {
         self.view.backgroundColor = UIColor.brownColor()
         
         let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-        let tableView = MathTableView(frame: frame,style: .Plain)
+        tableView = MathTableView(frame: frame,style: .Plain)
         self.view.addSubview(tableView)
 
         // Do any additional setup after loading the view.
@@ -26,6 +28,7 @@ class MathViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
    
     
     

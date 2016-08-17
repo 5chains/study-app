@@ -41,7 +41,10 @@ class MathTableView: UITableView,UITableViewDataSource,UITableViewDelegate {
         cell.questionThemeLabel.text = "三角関数まぢむりぃ"
         return cell
     }
-        
+    
+    
+
+    
     
     
 
