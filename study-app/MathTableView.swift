@@ -41,22 +41,7 @@ class MathTableView: UITableView,UITableViewDataSource,UITableViewDelegate {
         cell.questionThemeLabel.text = "三角関数まぢむりぃ"
         return cell
     }
-    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        performSegueWithIdentifier("chatViewControllerFromCell", sender: nil)
         
-        
-    }
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "chatViewControllerFromCell" {
-            let nav = segue.destinationViewController as! UINavigationController
-            nav.topViewController as! ChatViewController
-            
-            
-            // 変数:遷移先ViewController型 = segue.destinationViewController as 遷移先ViewController型
-            // segue.destinationViewController は遷移先のViewController
-        }
-    }
-    
     
     
 
