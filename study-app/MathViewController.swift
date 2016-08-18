@@ -19,6 +19,7 @@ class MathViewController: UIViewController {
         
         let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         tableView = MathTableView(frame: frame,style: .Plain)
+       
         self.view.addSubview(tableView)
 
         // Do any additional setup after loading the view.
@@ -28,6 +29,8 @@ class MathViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
    
     

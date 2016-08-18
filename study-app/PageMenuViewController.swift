@@ -30,6 +30,7 @@ class PageMenuViewController: UIViewController {
         let controller5:ScienceViewController = ScienceViewController(nibName: "ScienceViewController",bundle: nil)
         controller5.title = "理科"
         
+        
         pageMenuModel.addController(controller1)
         pageMenuModel.addController(controller2)
         pageMenuModel.addController(controller3)
@@ -65,19 +66,9 @@ class PageMenuViewController: UIViewController {
         performSegueWithIdentifier("loginViewController", sender: nil)
     }
     
-    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        let cell = table.dequeueReusableCellWithIdentifier("QuestionTableViewCell", forIndexPath: indexPath) as! QuestionTableViewCell
-        
-        cell.questionUserNameLabel.text = "shun"
-        cell.questionThemeLabel.text = "三角関数まぢむりぃ"
-        
-        
-        
-        performSegueWithIdentifier("chatViewControllerFromCell",sender: nil)
-        
-        
-        
-    }
+    
+    
+    
     
     
     

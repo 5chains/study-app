@@ -133,7 +133,7 @@
         <!--study-app④-->
         <scene sceneID="VHa-TK-gdb">
             <objects>
-                <viewController id="JAu-AX-G2o" customClass="ChatViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatViewController" id="JAu-AX-G2o" customClass="ChatViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0dr-zl-Vp1"/>
                         <viewControllerLayoutGuide type="bottom" id="u2e-xH-sMQ"/>
@@ -206,6 +206,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Vc2-2d-1uh"/>
+        <segue reference="34Y-LM-Mlc"/>
     </inferredMetricsTieBreakers>
 </document>
