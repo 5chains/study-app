@@ -6,19 +6,23 @@
 //  Copyright © 2016年 shun-sasano. All rights reserved.
 //
 
+
 import UIKit
 import PageMenu
 
-class PageMenuViewController: UIViewController {
+class PageMenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var pageMenuModel = PageMenuModel()
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         let controller1:MathViewController = MathViewController(nibName: "MathViewController",bundle: nil)
         controller1.title = "数学"
+        controller1.tableView.delegate = self
+        controller1.tableView.dataSource = self
         
         let controller2:EnglishViewController = EnglishViewController(nibName: "EnglishViewController",bundle: nil)
         controller2.title = "英語"
@@ -31,20 +35,25 @@ class PageMenuViewController: UIViewController {
         controller5.title = "理科"
         
         
+        
         pageMenuModel.addController(controller1)
         pageMenuModel.addController(controller2)
         pageMenuModel.addController(controller3)
         pageMenuModel.addController(controller4)
         pageMenuModel.addController(controller5)
         pageMenuModel.setPageMenu(self)
-
+        
         
         
         if NCMBUser.currentUser() == nil{
             performSegueWithIdentifier("loginViewController", sender: nil)
         }
     }
-
+    
+    func goChatView() {
+        performSegueWithIdentifier("chatViewControllerFromCell", sender: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -65,6 +74,22 @@ class PageMenuViewController: UIViewController {
         NCMBUser.logOut()
         performSegueWithIdentifier("loginViewController", sender: nil)
     }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("QuestionTableViewCell", forIndexPath: indexPath) as! QuestionTableViewCell
+        
+        cell.questionUserNameLabel.text = "shun"
+        cell.questionThemeLabel.text = "三角関数まぢむりぃ"
+        return cell
+    }
     
     
     
@@ -75,6 +100,7 @@ class PageMenuViewController: UIViewController {
     
     
     
-
+    
+    
+    
 }
-

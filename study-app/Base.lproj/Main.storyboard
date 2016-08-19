@@ -22,8 +22,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="B9i-5l-ZLE" kind="show" identifier="questionCreateViewController" id="vPL-IC-uFS"/>
-                        <segue destination="XPd-rf-Qnn" kind="presentation" identifier="chatViewControllerFromCell" id="Vc2-2d-1uh"/>
                         <segue destination="1ji-Zr-bjr" kind="presentation" identifier="loginViewController" id="jCy-Vy-Nzx"/>
+                        <segue destination="XPd-rf-Qnn" kind="presentation" identifier="chatViewControllerFromCell" id="25x-AR-wXu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,25 +142,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V8P-11-W2W">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8P-11-W2W">
                                 <rect key="frame" x="0.0" y="64" width="375" height="270"/>
                                 <color key="backgroundColor" red="1" green="0.83281480313316014" blue="0.14538580104866983" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5H-UC-Itg">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5H-UC-Itg">
                                 <rect key="frame" x="0.0" y="335" width="375" height="332"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fhq-kv-92K">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="332"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="sectionIndexBackgroundColor" red="1" green="0.32819155842838377" blue="0.44219586080380424" alpha="1" colorSpace="calibratedRGB"/>
-                                    </tableView>
-                                </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="leading" secondItem="V8P-11-W2W" secondAttribute="leading" id="AcX-Uu-9Gh"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="bottom" secondItem="u2e-xH-sMQ" secondAttribute="top" id="Rvs-at-jUL"/>
+                            <constraint firstItem="V8P-11-W2W" firstAttribute="top" secondItem="0dr-zl-Vp1" secondAttribute="bottom" id="gxx-I0-ak4"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="top" secondItem="Gio-xr-SRI" secondAttribute="top" constant="335" id="lQb-pW-g5T"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="top" secondItem="V8P-11-W2W" secondAttribute="bottom" constant="1" id="u69-AX-bJd"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="trailing" secondItem="V8P-11-W2W" secondAttribute="trailing" id="wTH-He-490"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="leading" secondItem="Gio-xr-SRI" secondAttribute="leading" id="ywh-uQ-4Bx"/>
+                            <constraint firstAttribute="trailing" secondItem="d5H-UC-Itg" secondAttribute="trailing" id="zhl-Lg-fjD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="study-app④" id="7mS-qN-Zvc"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chatScrollView" destination="d5H-UC-Itg" id="547-ej-BYg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acW-uz-uJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxm-q4-D5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558.5" y="1260.5"/>
+            <point key="canvasLocation" x="1579.5" y="1260.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uzK-if-flI">
@@ -206,6 +212,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="34Y-LM-Mlc"/>
+        <segue reference="25x-AR-wXu"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -39,6 +39,9 @@
 		9FA0A7711D64C8430045ECA9 /* ScienceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A7701D64C8430045ECA9 /* ScienceTableView.swift */; };
 		9FA0A7741D64C8A30045ECA9 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A7721D64C8A30045ECA9 /* QuestionTableViewCell.swift */; };
 		9FA0A7751D64C8A30045ECA9 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0A7731D64C8A30045ECA9 /* QuestionTableViewCell.xib */; };
+		9FE2D3721D66EE460072BFE3 /* ChatTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2D3711D66EE460072BFE3 /* ChatTableView.swift */; };
+		9FE2D3751D66FB4E0072BFE3 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2D3731D66FB4E0072BFE3 /* ChatTableViewCell.swift */; };
+		9FE2D3761D66FB4E0072BFE3 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2D3741D66FB4E0072BFE3 /* ChatTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,9 @@
 		9FA0A7701D64C8430045ECA9 /* ScienceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScienceTableView.swift; sourceTree = "<group>"; };
 		9FA0A7721D64C8A30045ECA9 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		9FA0A7731D64C8A30045ECA9 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		9FE2D3711D66EE460072BFE3 /* ChatTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableView.swift; sourceTree = "<group>"; };
+		9FE2D3731D66FB4E0072BFE3 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		9FE2D3741D66FB4E0072BFE3 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		BC0E68B72962692216AF611D /* Pods_study_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_study_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,6 +178,9 @@
 				9FA0A7701D64C8430045ECA9 /* ScienceTableView.swift */,
 				9FA0A7721D64C8A30045ECA9 /* QuestionTableViewCell.swift */,
 				9FA0A7731D64C8A30045ECA9 /* QuestionTableViewCell.xib */,
+				9FE2D3711D66EE460072BFE3 /* ChatTableView.swift */,
+				9FE2D3731D66FB4E0072BFE3 /* ChatTableViewCell.swift */,
+				9FE2D3741D66FB4E0072BFE3 /* ChatTableViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 				9FA0A7751D64C8A30045ECA9 /* QuestionTableViewCell.xib in Resources */,
 				9FA0A7451D6455310045ECA9 /* ChatViewController.xib in Resources */,
 				9FA0A7321D6450CB0045ECA9 /* Main.storyboard in Resources */,
+				9FE2D3761D66FB4E0072BFE3 /* ChatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +349,9 @@
 				9FA0A74B1D64B5130045ECA9 /* LoginViewController.swift in Sources */,
 				9FA0A7401D6452BA0045ECA9 /* QuestionCreateViewController.swift in Sources */,
 				9FA0A7671D64C1390045ECA9 /* PageMenuModel.swift in Sources */,
+				9FE2D3721D66EE460072BFE3 /* ChatTableView.swift in Sources */,
 				9FA0A7741D64C8A30045ECA9 /* QuestionTableViewCell.swift in Sources */,
+				9FE2D3751D66FB4E0072BFE3 /* ChatTableViewCell.swift in Sources */,
 				9FA0A7581D64BFBC0045ECA9 /* EnglishViewController.swift in Sources */,
 				9FA0A7601D64BFE50045ECA9 /* SocietyViewController.swift in Sources */,
 			);

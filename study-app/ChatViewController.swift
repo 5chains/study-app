@@ -10,8 +10,12 @@ import UIKit
 
 class ChatViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var chatScrollView: UIScrollView!
+        override func viewDidLoad() {
         super.viewDidLoad()
+        let chatTableView:ChatTableView = ChatTableView(frame: CGRectMake(0, 0,1000, chatScrollView.frame.width),style: .Plain)
+        
+        chatScrollView.addSubview(chatTableView)
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +25,7 @@ class ChatViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+        
 
     /*
     // MARK: - Navigation

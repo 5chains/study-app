@@ -8,10 +8,12 @@
 
 import UIKit
 
-class MathViewController: UIViewController {
+class MathViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var tableView = UITableView()
-
+    let pageMenuViewController:PageMenuViewController = PageMenuViewController(nibName: "PageMenuViewController",bundle: nil)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,18 +21,39 @@ class MathViewController: UIViewController {
         
         let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         tableView = MathTableView(frame: frame,style: .Plain)
-       
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
+        
         self.view.addSubview(tableView)
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+        
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("QuestionTableViewCell", forIndexPath: indexPath) as! QuestionTableViewCell
+        
+        cell.questionUserNameLabel.text = "shun"
+        cell.questionThemeLabel.text = "三角関数まぢむりぃ"
+        return cell
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        pageMenuViewController.goChatView()
+    }
     
    
     
