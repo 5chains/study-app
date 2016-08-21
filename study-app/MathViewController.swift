@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol MathViewControllerDelegate: class {
+    func goChatView()
+}
+
 class MathViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
+    weak var delegate: MathViewControllerDelegate!
     
     var tableView = UITableView()
     let pageMenuViewController:PageMenuViewController = PageMenuViewController(nibName: "PageMenuViewController",bundle: nil)
@@ -52,7 +58,10 @@ class MathViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        pageMenuViewController.goChatView()
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // デリゲートメソッドを呼び出す
+        delegate?.goChatView()
     }
     
    

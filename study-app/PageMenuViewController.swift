@@ -10,7 +10,7 @@
 import UIKit
 import PageMenu
 
-class PageMenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class PageMenuViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,MathViewControllerDelegate {
     
     var pageMenuModel = PageMenuModel()
     
@@ -23,6 +23,7 @@ class PageMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
         controller1.title = "数学"
         controller1.tableView.delegate = self
         controller1.tableView.dataSource = self
+        controller1.delegate = self
         
         let controller2:EnglishViewController = EnglishViewController(nibName: "EnglishViewController",bundle: nil)
         controller2.title = "英語"
@@ -51,7 +52,8 @@ class PageMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func goChatView() {
-        performSegueWithIdentifier("chatViewControllerFromCell", sender: self)
+     
+        performSegueWithIdentifier("chatViewControllerFromCell", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {
