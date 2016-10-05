@@ -10,7 +10,6 @@
 		54E3A64DCDF5933CBFE558C2 /* Pods_study_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC0E68B72962692216AF611D /* Pods_study_app.framework */; };
 		9FA0A72D1D6450CB0045ECA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A72C1D6450CB0045ECA9 /* AppDelegate.swift */; };
 		9FA0A72F1D6450CB0045ECA9 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A72E1D6450CB0045ECA9 /* PageMenuViewController.swift */; };
-		9FA0A7321D6450CB0045ECA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0A7301D6450CB0045ECA9 /* Main.storyboard */; };
 		9FA0A7341D6450CB0045ECA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0A7331D6450CB0045ECA9 /* Assets.xcassets */; };
 		9FA0A7371D6450CB0045ECA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0A7351D6450CB0045ECA9 /* LaunchScreen.storyboard */; };
 		9FA0A7401D6452BA0045ECA9 /* QuestionCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A73E1D6452BA0045ECA9 /* QuestionCreateViewController.swift */; };
@@ -39,9 +38,15 @@
 		9FA0A7711D64C8430045ECA9 /* ScienceTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A7701D64C8430045ECA9 /* ScienceTableView.swift */; };
 		9FA0A7741D64C8A30045ECA9 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA0A7721D64C8A30045ECA9 /* QuestionTableViewCell.swift */; };
 		9FA0A7751D64C8A30045ECA9 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA0A7731D64C8A30045ECA9 /* QuestionTableViewCell.xib */; };
+		9FABF6BF1D8186E100AC5374 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABF6BE1D8186E100AC5374 /* SideViewController.swift */; };
+		9FABF6C11D81D24D00AC5374 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABF6C01D81D24D00AC5374 /* Question.swift */; };
+		9FABF6C31D81D72300AC5374 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABF6C21D81D72300AC5374 /* QuestionManager.swift */; };
 		9FE2D3721D66EE460072BFE3 /* ChatTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2D3711D66EE460072BFE3 /* ChatTableView.swift */; };
 		9FE2D3751D66FB4E0072BFE3 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2D3731D66FB4E0072BFE3 /* ChatTableViewCell.swift */; };
 		9FE2D3761D66FB4E0072BFE3 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2D3741D66FB4E0072BFE3 /* ChatTableViewCell.xib */; };
+		9FEE5C1B1D9F474A00EFE799 /* humbergerMenu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE5C1A1D9F474A00EFE799 /* humbergerMenu.jpeg */; };
+		9FEE5C1D1D9F4CDC00EFE799 /* humbergerMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE5C1C1D9F4CDC00EFE799 /* humbergerMenu.png */; };
+		9FEE5C1F1D9F4F4A00EFE799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FEE5C1E1D9F4F4A00EFE799 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +55,6 @@
 		9FA0A7291D6450CB0045ECA9 /* study-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "study-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA0A72C1D6450CB0045ECA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FA0A72E1D6450CB0045ECA9 /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
-		9FA0A7311D6450CB0045ECA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FA0A7331D6450CB0045ECA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FA0A7361D6450CB0045ECA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FA0A7381D6450CB0045ECA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,9 +85,15 @@
 		9FA0A7701D64C8430045ECA9 /* ScienceTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScienceTableView.swift; sourceTree = "<group>"; };
 		9FA0A7721D64C8A30045ECA9 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		9FA0A7731D64C8A30045ECA9 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		9FABF6BE1D8186E100AC5374 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
+		9FABF6C01D81D24D00AC5374 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9FABF6C21D81D72300AC5374 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		9FE2D3711D66EE460072BFE3 /* ChatTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableView.swift; sourceTree = "<group>"; };
 		9FE2D3731D66FB4E0072BFE3 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		9FE2D3741D66FB4E0072BFE3 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		9FEE5C1A1D9F474A00EFE799 /* humbergerMenu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = humbergerMenu.jpeg; sourceTree = "<group>"; };
+		9FEE5C1C1D9F4CDC00EFE799 /* humbergerMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = humbergerMenu.png; sourceTree = "<group>"; };
+		9FEE5C1E1D9F4F4A00EFE799 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BC0E68B72962692216AF611D /* Pods_study_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_study_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,12 +153,14 @@
 				9FA0A74D1D64B6940045ECA9 /* Models */,
 				9FA0A7461D64B36F0045ECA9 /* NCMB.framework */,
 				9FA0A72C1D6450CB0045ECA9 /* AppDelegate.swift */,
+				9FEE5C191D9F46E900EFE799 /* Images */,
+				9FABF6BE1D8186E100AC5374 /* SideViewController.swift */,
 				9FA0A72E1D6450CB0045ECA9 /* PageMenuViewController.swift */,
+				9FEE5C1E1D9F4F4A00EFE799 /* Main.storyboard */,
 				9FA0A7421D6455310045ECA9 /* ChatViewController.swift */,
 				9FA0A7431D6455310045ECA9 /* ChatViewController.xib */,
 				9FA0A73E1D6452BA0045ECA9 /* QuestionCreateViewController.swift */,
 				9FA0A73F1D6452BA0045ECA9 /* QuestionCreateViewController.xib */,
-				9FA0A7301D6450CB0045ECA9 /* Main.storyboard */,
 				9FA0A7331D6450CB0045ECA9 /* Assets.xcassets */,
 				9FA0A7351D6450CB0045ECA9 /* LaunchScreen.storyboard */,
 				9FA0A7381D6450CB0045ECA9 /* Info.plist */,
@@ -164,6 +176,8 @@
 			children = (
 				9FA0A7501D64B6CC0045ECA9 /* User.swift */,
 				9FA0A7661D64C1390045ECA9 /* PageMenuModel.swift */,
+				9FABF6C01D81D24D00AC5374 /* Question.swift */,
+				9FABF6C21D81D72300AC5374 /* QuestionManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +216,15 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		9FEE5C191D9F46E900EFE799 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9FEE5C1C1D9F4CDC00EFE799 /* humbergerMenu.png */,
+				9FEE5C1A1D9F474A00EFE799 /* humbergerMenu.jpeg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,11 +255,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "shun-sasano";
 				TargetAttributes = {
 					9FA0A7281D6450CB0045ECA9 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -263,9 +287,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEE5C1B1D9F474A00EFE799 /* humbergerMenu.jpeg in Resources */,
 				9FA0A7551D64BFAC0045ECA9 /* MathViewController.xib in Resources */,
 				9FA0A7651D64BFFF0045ECA9 /* ScienceViewController.xib in Resources */,
 				9FA0A7411D6452BA0045ECA9 /* QuestionCreateViewController.xib in Resources */,
+				9FEE5C1F1D9F4F4A00EFE799 /* Main.storyboard in Resources */,
 				9FA0A7371D6450CB0045ECA9 /* LaunchScreen.storyboard in Resources */,
 				9FA0A7611D64BFE50045ECA9 /* SocietyViewController.xib in Resources */,
 				9FA0A7591D64BFBC0045ECA9 /* EnglishViewController.xib in Resources */,
@@ -274,8 +300,8 @@
 				9FA0A7341D6450CB0045ECA9 /* Assets.xcassets in Resources */,
 				9FA0A7751D64C8A30045ECA9 /* QuestionTableViewCell.xib in Resources */,
 				9FA0A7451D6455310045ECA9 /* ChatViewController.xib in Resources */,
-				9FA0A7321D6450CB0045ECA9 /* Main.storyboard in Resources */,
 				9FE2D3761D66FB4E0072BFE3 /* ChatTableViewCell.xib in Resources */,
+				9FEE5C1D1D9F4CDC00EFE799 /* humbergerMenu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,31 +369,26 @@
 				9FA0A7511D64B6CC0045ECA9 /* User.swift in Sources */,
 				9FA0A75C1D64BFD00045ECA9 /* JapaneseViewController.swift in Sources */,
 				9FA0A7711D64C8430045ECA9 /* ScienceTableView.swift in Sources */,
+				9FABF6C11D81D24D00AC5374 /* Question.swift in Sources */,
 				9FA0A7691D64C7AF0045ECA9 /* MathTableView.swift in Sources */,
 				9FA0A7441D6455310045ECA9 /* ChatViewController.swift in Sources */,
 				9FA0A7641D64BFFF0045ECA9 /* ScienceViewController.swift in Sources */,
 				9FA0A74B1D64B5130045ECA9 /* LoginViewController.swift in Sources */,
 				9FA0A7401D6452BA0045ECA9 /* QuestionCreateViewController.swift in Sources */,
+				9FABF6C31D81D72300AC5374 /* QuestionManager.swift in Sources */,
 				9FA0A7671D64C1390045ECA9 /* PageMenuModel.swift in Sources */,
 				9FE2D3721D66EE460072BFE3 /* ChatTableView.swift in Sources */,
 				9FA0A7741D64C8A30045ECA9 /* QuestionTableViewCell.swift in Sources */,
 				9FE2D3751D66FB4E0072BFE3 /* ChatTableViewCell.swift in Sources */,
 				9FA0A7581D64BFBC0045ECA9 /* EnglishViewController.swift in Sources */,
 				9FA0A7601D64BFE50045ECA9 /* SocietyViewController.swift in Sources */,
+				9FABF6BF1D8186E100AC5374 /* SideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9FA0A7301D6450CB0045ECA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FA0A7311D6450CB0045ECA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FA0A7351D6450CB0045ECA9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -393,8 +414,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -416,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -439,8 +462,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -456,9 +481,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -468,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 587411B0F05B8BBC71124A83 /* Pods-study-app.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -478,6 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.study-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "study-app/NCMB.framework.Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -485,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06E90B191EB40EF9FF3298FA /* Pods-study-app.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,6 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany.study-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "study-app/NCMB.framework.Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

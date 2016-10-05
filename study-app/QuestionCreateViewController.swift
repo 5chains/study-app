@@ -10,6 +10,9 @@ import UIKit
 
 class QuestionCreateViewController: UIViewController {
 
+    @IBOutlet weak var subjectSegment: UISegmentedControl!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var contentTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,20 +24,27 @@ class QuestionCreateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "投稿", style: .Plain, target: self, action: #selector(QuestionCreateViewController.createQuestion))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "投稿", style: .plain, target: self, action: #selector(QuestionCreateViewController.createQuestion))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "←", style: .plain, target: self, action: #selector(self.backPageMenu))
         
         
     }
     
     func createQuestion() {
-        performSegueWithIdentifier("chatViewController", sender: nil)
+        let question = Question(title: titleTextField.text!, content: contentTextView.text)
+        print(SubjectSegment(rawValue: subjectSegment.selectedSegmentIndex)!)
+        question.subjectSegment = SubjectSegment(rawValue: subjectSegment.selectedSegmentIndex)!
         
+        question.save{ () in
+            self.performSegue(withIdentifier: "chatViewController", sender: nil)
+        }
+    
     }
     
     func backPageMenu() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 

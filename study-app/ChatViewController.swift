@@ -13,11 +13,18 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var chatScrollView: UIScrollView!
         override func viewDidLoad() {
         super.viewDidLoad()
-        let chatTableView:ChatTableView = ChatTableView(frame: CGRectMake(0, 0,1000, chatScrollView.frame.width),style: .Plain)
-        
-        chatScrollView.addSubview(chatTableView)
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "top",style: .plain, target: self, action: #selector(ChatViewController.backToTop))
+            
+            let chatTableView:ChatTableView = ChatTableView(frame: CGRect(x: 0, y: 0,width: 1000, height: chatScrollView.frame.width),style: .plain)
+            
+            chatScrollView.addSubview(chatTableView)
 
         // Do any additional setup after loading the view.
+    }
+    
+    func backToTop() {
+        performSegue(withIdentifier: "backToTop", sender: nil)
+        //おそらくperformSegueWithIdentifierはviewdidloadが動くが、dismissviewcontrolleranimatedの場合は
     }
 
     override func didReceiveMemoryWarning() {

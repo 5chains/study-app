@@ -84,8 +84,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/MMDrawerController/MMDrawerController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PageMenu/PageMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/MMDrawerController/MMDrawerController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PageMenu/PageMenu.framework"
 fi

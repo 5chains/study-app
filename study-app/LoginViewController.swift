@@ -22,26 +22,26 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func tapSignInButton(sender: UIButton) {
+    @IBAction func tapSignInButton(_ sender: UIButton) {
         let user = User(name: nameTextField.text!, password: passwordTextField.text!)
         user.signUp()
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func showAlert(message: String?) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+    func showAlert(_ message: String?) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(action)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    @IBAction func tapLoginButton(sender: UIButton) {
+    @IBAction func tapLoginButton(_ sender: UIButton) {
         let user = User(name: nameTextField.text!, password: passwordTextField.text!)
         user.login { (message) in
             if let unwrappedMessage = message {
                 self.showAlert(unwrappedMessage)
             } else {
-                self.dismissViewControllerAnimated(true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }

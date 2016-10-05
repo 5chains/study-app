@@ -9,30 +9,44 @@
 import UIKit
 
 protocol MathViewControllerDelegate: class {
+    
+    
     func goChatView()
 }
 
 class MathViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     weak var delegate: MathViewControllerDelegate!
+    var timer:Timer = Timer()
+    
+    let controllerNumber :SubjectSegment = .math
+    
+    
+    let refreshControl = UIRefreshControl()
     
     var tableView = UITableView()
     let pageMenuViewController:PageMenuViewController = PageMenuViewController(nibName: "PageMenuViewController",bundle: nil)
-    
+    let questionManager = QuestionManager.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.brownColor()
+        self.view.backgroundColor = UIColor.blue
         
-        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-        tableView = MathTableView(frame: frame,style: .Plain)
+        let frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        tableView = MathTableView(frame: frame,style: .plain)
         tableView.dataSource = self
         tableView.delegate = self
         
-        
-        
+
         self.view.addSubview(tableView)
+
+        self.refreshControl.attributedTitle = NSAttributedString(string: "更新中")
+        self.refreshControl.addTarget(self, action: #selector(refresh(_:)), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
+        questionManager.fetchQuestions(controllerNumber){ () in
+            self.tableView.reloadData()
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -41,28 +55,48 @@ class MathViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return questionManager.questions.count
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("QuestionTableViewCell", forIndexPath: indexPath) as! QuestionTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath) as! QuestionTableViewCell
+        let question = questionManager.questions[(indexPath as NSIndexPath).row]
+//        print(question.subjectSegment)
+        
         
         cell.questionUserNameLabel.text = "shun"
-        cell.questionThemeLabel.text = "三角関数まぢむりぃ"
+        cell.questionThemeLabel.text = question.title
         return cell
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
         // デリゲートメソッドを呼び出す
         delegate?.goChatView()
     }
+    
+    
+    
+    
+
+    func refresh(_ sender: UIRefreshControl) {
+//        timer = NSTimer.scheduledTimerWithTimeInterval(5.0,target: self,selector: #selector(self.endRefresh(_:)),userInfo: nil,repeats: false)
+        self.questionManager.fetchQuestions(controllerNumber){ (controllerNumber) in
+            self.tableView.reloadData()
+        }
+        self.refreshControl.endRefreshing()
+
+        
+    }
+    
+   
+    
     
    
     

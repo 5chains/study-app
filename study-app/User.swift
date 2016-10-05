@@ -21,21 +21,29 @@ class User: NSObject {
         let user = NCMBUser()
         user.userName = name
         user.password = password
-        user.signUpInBackgroundWithBlock{(error: NSError!) in
-            if error != nil {
-                // 新規登録失敗時の処理
-                
-            }else{
-                // 新規登録成功時の処理
-                
+        user.signUpInBackground{ (error) in
+            if error == nil {
             }
         }
+
+
+        
+        
+//        user.signUpInBackgroundWithBlock{(error: NCMBErrorResultBlock) in
+//            if error != nil {
+//                // 新規登録失敗時の処理
+//                
+//            }else{
+//                // 新規登録成功時の処理
+//            }
+//        }
+        
     }
     
-    func login(callback: (message: String?) -> Void) {
-        NCMBUser.logInWithUsernameInBackground(self.name, password: self.password) { (user, error) in
-            callback(message: error?.userInfo["NSLocalizedDescription"] as? String)
-        }
+    func login(_ callback: @escaping (_ message: String?) -> Void) {
+//        NCMBUser.logInWithUsername(inBackground: self.name, password: self.password) { (user, error) in
+//            callback(error?.userInfo["NSLocalizedDescription"] as? String)
+//        }
     }
 
 

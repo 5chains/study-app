@@ -14,10 +14,10 @@ class SocietyViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.brownColor()
+        self.view.backgroundColor = UIColor.brown
         
-        let frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
-        let tableView = SocietyTableView(frame: frame,style: .Plain)
+        let frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        let tableView = SocietyTableView(frame: frame,style: .plain)
         self.view.addSubview(tableView)
     }
 

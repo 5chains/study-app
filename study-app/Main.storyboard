@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vfe-fa-KCQ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Side View Controller-->
+        <scene sceneID="zOP-AN-QI4">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="fNP-8l-uhv" customClass="SideViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cLX-AF-KTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="7XF-Wr-nAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o5O-Lc-cU6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDN-t1-z38">
+                                <frame key="frameInset" minY="178" width="375" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23817179687460799" green="1" blue="0.93771747419293905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="fNP-8l-uhv" eventType="touchUpInside" id="J3D-eU-15j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71158821367207481" green="0.96888547642697154" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="1ji-Zr-bjr" kind="presentation" identifier="loginViewController" id="CEv-F2-fB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIl-Wn-9EG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="1260"/>
+        </scene>
+        <!--study-app2-->
+        <scene sceneID="4ki-Pz-3Eo">
+            <objects>
+                <viewController storyboardIdentifier="CenterViewController" id="PTQ-tU-fQY" customClass="PageMenuViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oeO-qj-kWZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUZ-jx-9Ah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B02-9y-At4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="study-app2" id="6yu-hv-rQJ"/>
+                    <connections>
+                        <segue destination="j0R-Hd-xl1" kind="presentation" identifier="questionCreateViewController" id="Xx1-sr-Xqc"/>
+                        <segue destination="XPd-rf-Qnn" kind="presentation" identifier="chatViewControllerFromCell" id="vYb-62-F8Q"/>
+                        <segue destination="1ji-Zr-bjr" kind="presentation" identifier="loginViewController" id="a0L-Qo-wNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rn7-rJ-3jQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="365"/>
+        </scene>
+        <!--study-app③-->
+        <scene sceneID="TrZ-Qr-mwZ">
+            <objects>
+                <viewController id="B9i-5l-ZLE" customClass="QuestionCreateViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJb-Im-kMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Ve-qh-J0h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NkZ-2T-AmS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UoU-5n-qjL">
+                                <frame key="frameInset" minX="16" minY="133" width="342" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="数学"/>
+                                    <segment title="英語"/>
+                                    <segment title="国語"/>
+                                    <segment title="社会"/>
+                                    <segment title="理科"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="どの教科質問をしますか？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MI-zt-4X6">
+                                <frame key="frameInset" minX="20" minY="72" width="338" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm4-7m-8qB">
+                                <frame key="frameInset" minX="16" minY="169" width="342" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Jc-xJ-sUi">
+                                <frame key="frameInset" minX="20" minY="224" width="338" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLG-SF-WZl">
+                                <frame key="frameInset" minX="20" minY="262" width="335" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HCi-PD-h7N">
+                                <frame key="frameInset" minX="20" minY="322" width="330" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.52812614464658814" green="1" blue="0.83259568206815904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="study-app③" id="Zay-hr-IN9"/>
+                    <connections>
+                        <outlet property="contentTextView" destination="HCi-PD-h7N" id="zhd-L4-cgx"/>
+                        <outlet property="subjectSegment" destination="UoU-5n-qjL" id="zXM-0d-OVz"/>
+                        <outlet property="titleTextField" destination="9Jc-xJ-sUi" id="IM0-Gy-gXv"/>
+                        <segue destination="XPd-rf-Qnn" kind="presentation" identifier="chatViewController" id="34Y-LM-Mlc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZW-B9-NPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2257" y="365"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JaO-Jl-AQ8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vfe-fa-KCQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YMP-hj-mOY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PTQ-tU-fQY" kind="relationship" relationship="rootViewController" id="d20-Dy-gLv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJP-k1-4ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="365"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="fod-m8-e8H">
+            <objects>
+                <viewController id="grz-G0-qed" customClass="LoginViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G89-jK-Hlj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bym-gg-Kg6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pjp-JS-mB1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJG-or-aZg">
+                                <frame key="frameInset" minX="20" minY="144" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qnw-oc-qJ6">
+                                <frame key="frameInset" minX="20" minY="265" width="335" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-Vd-ckd">
+                                <frame key="frameInset" minX="27" minY="423" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23972307290872374" green="0.50936534098156527" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="sign in">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapSignInButton:" destination="grz-G0-qed" eventType="touchUpInside" id="w9p-Xm-pE6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYi-iu-LOG">
+                                <frame key="frameInset" minX="196" minY="423" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1081535272690487" green="1" blue="0.8852974972011507" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="login">
+                                    <color key="titleColor" red="0.97416673254248309" green="1" blue="0.95720091587667677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapLoginButton:" destination="grz-G0-qed" eventType="touchUpInside" id="7Bo-RC-T3B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aCv-0d-lJB"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="PJG-or-aZg" id="An7-Im-BU8"/>
+                        <outlet property="passwordTextField" destination="qnw-oc-qJ6" id="bOP-1b-ILb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4V-92-ktv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="1260"/>
+        </scene>
+        <!--study-app④-->
+        <scene sceneID="VHa-TK-gdb">
+            <objects>
+                <viewController id="JAu-AX-G2o" customClass="ChatViewController" customModule="study_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0dr-zl-Vp1"/>
+                        <viewControllerLayoutGuide type="bottom" id="u2e-xH-sMQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gio-xr-SRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8P-11-W2W">
+                                <color key="backgroundColor" red="1" green="0.83281480313316014" blue="0.14538580104866983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5H-UC-Itg"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="leading" secondItem="V8P-11-W2W" secondAttribute="leading" id="AcX-Uu-9Gh"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="bottom" secondItem="u2e-xH-sMQ" secondAttribute="top" id="Rvs-at-jUL"/>
+                            <constraint firstItem="V8P-11-W2W" firstAttribute="top" secondItem="0dr-zl-Vp1" secondAttribute="bottom" id="gxx-I0-ak4"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="top" secondItem="Gio-xr-SRI" secondAttribute="top" constant="335" id="lQb-pW-g5T"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="top" secondItem="V8P-11-W2W" secondAttribute="bottom" constant="1" id="u69-AX-bJd"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="trailing" secondItem="V8P-11-W2W" secondAttribute="trailing" id="wTH-He-490"/>
+                            <constraint firstItem="d5H-UC-Itg" firstAttribute="leading" secondItem="Gio-xr-SRI" secondAttribute="leading" id="ywh-uQ-4Bx"/>
+                            <constraint firstAttribute="trailing" secondItem="d5H-UC-Itg" secondAttribute="trailing" id="zhl-Lg-fjD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="study-app④" id="7mS-qN-Zvc"/>
+                    <connections>
+                        <outlet property="chatScrollView" destination="d5H-UC-Itg" id="547-ej-BYg"/>
+                        <segue destination="vfe-fa-KCQ" kind="presentation" identifier="backToTop" id="lBY-R0-e5N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acW-uz-uJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="1260"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jUG-qy-t7N">
+            <objects>
+                <navigationController storyboardIdentifier="chatViewControllerNav" automaticallyAdjustsScrollViewInsets="NO" id="XPd-rf-Qnn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0Zc-Te-Vss"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="To4-UC-IvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JAu-AX-G2o" kind="relationship" relationship="rootViewController" id="7XR-SP-kdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxm-q4-D5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="1260"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uzK-if-flI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ji-Zr-bjr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yCg-ax-bnW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="grz-G0-qed" kind="relationship" relationship="rootViewController" id="sWh-sX-cdp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MS7-Km-Evr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490" y="1260"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Iy3-cw-EOs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j0R-Hd-xl1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yYh-oh-htG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B9i-5l-ZLE" kind="relationship" relationship="rootViewController" id="WxE-85-DvP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iW-yF-Wga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558.5" y="365.5"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vYb-62-F8Q"/>
+        <segue reference="a0L-Qo-wNx"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -16,22 +16,22 @@ class PageMenuModel {
     
     init() {
         params = [
-            .ScrollMenuBackgroundColor(UIColor.blackColor()),
-            .ViewBackgroundColor(UIColor.blackColor()),
-            .SelectionIndicatorColor(UIColor.orangeColor()),
-            .BottomMenuHairlineColor(UIColor.blackColor()),
-            .MenuItemFont(UIFont(name: "HelveticaNeue", size: 21.0)!),
-            .MenuHeight(60.0),
-            .MenuItemWidth(100.0),
-            .CenterMenuItems(true),
-            .MenuItemSeparatorWidth(4.3)   ]
+            .scrollMenuBackgroundColor(UIColor.black),
+            .viewBackgroundColor(UIColor.black),
+            .selectionIndicatorColor(UIColor.blue),
+            .bottomMenuHairlineColor(UIColor.black),
+            .menuItemFont(UIFont(name: "HelveticaNeue", size: 14.0)!),
+            .menuHeight(40.0),
+            .menuItemWidth(50.0),
+            .centerMenuItems(true),
+            .menuItemSeparatorWidth(4.3)   ]
     }
-    func addController(viewController: UIViewController) {
+    func addController(_ viewController: UIViewController) {
         self.controllerArray.append(viewController)
     }
     
-    func setPageMenu(baseViewController: UIViewController) {
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 50.0, baseViewController.view.frame.width, baseViewController.view.frame.height), pageMenuOptions: params)
+    func setPageMenu(_ baseViewController: UIViewController) {
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect(x: 0.0, y: 65.0, width: baseViewController.view.frame.width, height: baseViewController.view.frame.height), pageMenuOptions: params)
         baseViewController.view.addSubview(pageMenu!.view)
         
     }
